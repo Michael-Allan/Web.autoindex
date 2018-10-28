@@ -1,4 +1,7 @@
-/** Client side script, referent of file ./autoindex.conf
+/** IndexHeadInsert.js - Index programming on the client side
+  *
+  *   Dispatched by the *IndexHeadInsert* directive of file autoindex.conf,
+  *   this program runs on the client side where it manipulates the DOM of the index document.
   */
 ( function()
 {
