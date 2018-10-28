@@ -6,6 +6,12 @@
  */
 
 
+tr.indexbreakrow
+{
+    opacity: 0.4;
+}
+
+
 tr.indexhead
 {
     filter: opacity(0.6) saturate(0.5);
