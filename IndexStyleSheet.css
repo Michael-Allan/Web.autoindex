@@ -1,0 +1,83 @@
+/* IndexStyleSheet.css - Index styling on the client side
+ *
+ *   Dispatched by the *IndexStyleSheet* directive of file autoindex.conf,
+ *   this style sheet runs on the client side where it formats the presentation of the index document.
+ *   https://httpd.apache.org/docs/2.4/mod/mod_autoindex.html#indexstylesheet
+ */
+
+
+tr.indexhead
+{
+    filter: opacity(0.6) saturate(0.5);
+    text-align: left;
+}
+
+
+
+/* ---  C o l u m n   " l a s t   m o d i f i e d "  ---------------------------------------------------
+ */
+
+.indexcollastmod
+{
+    padding-left: 0.5em;
+}
+
+
+td.indexcollastmod
+{
+    opacity: 0.6;
+}
+
+
+
+/* ---  C o l u m n   " n a m e "  ---------------------------------------------------------------------
+ */
+
+td.indexcolname > a
+{
+    color: inherit; /* Defeat colour as unecessary and distracting */
+}
+
+
+tr.indexbreakrow + tr.even > td.indexcolname /* "Parent Directory" */
+{
+    opacity: 0.6;
+}
+
+
+
+/* ---  C o l u m n   " s i z e "  ---------------------------------------------------------------------
+ */
+
+.indexcolsize
+{
+    padding-left: 1.0em;
+}
+
+
+td.indexcolsize
+{
+    opacity: 0.8;
+}
+
+
+
+/* ---  N u m e r i c   b o i l e r p l a t e  ---------------------------------------------------------
+ */
+
+td.indexcollastmod, /* "last modified" and    */
+td.indexcolsize     /* "size" columns.  [ISS] */
+{
+    font-family: monospace; /* Vertically align the timestamp fields and numbers */
+    font-size: 0.9em; /* Mitigate any ballooning of size caused by monospacing */
+}
+
+
+
+/* NOTE
+ * ----
+ *  [ISS]  https://httpd.apache.org/docs/2.4/mod/mod_autoindex.html#indexstylesheet
+ */
+
+
+/* Copyright © 2018 Michael Allan and contributors.  Licence MIT. */
