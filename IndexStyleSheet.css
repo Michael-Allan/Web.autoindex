@@ -6,9 +6,25 @@
  */
 
 
+table#indexlist
+{
+    white-space: nowrap;
+}
+
+
 tr.indexbreakrow /* Horizontal lines */
 {
     opacity: 0.4;
+}
+
+
+
+/* ---  C o l u m n   " d e s c r i p t i o n "  -------------------------------------------------------
+ */
+
+.indexcoldesc
+{
+    padding-left: 0.5em;
 }
 
 
