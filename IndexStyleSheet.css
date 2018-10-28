@@ -6,22 +6,9 @@
  */
 
 
-tr.indexbreakrow
+tr.indexbreakrow /* Horizontal lines */
 {
     opacity: 0.4;
-}
-
-
-tr.indexhead
-{
-    filter: opacity(0.6) saturate(0.5);
-    text-align: left;
-}
-
-
-tr.indexhead a
-{
-    text-decoration: none; /* Defeat here any default underlining (Chrome) as unecessary clutter */
 }
 
 
@@ -44,7 +31,6 @@ td.indexcollastmod
 
 /* ---  C o l u m n   " n a m e "  ---------------------------------------------------------------------
  */
-
 
 td.indexcolname > a
 {
@@ -72,6 +58,23 @@ tr.indexbreakrow + tr.even > td.indexcolname /* "Parent Directory" */
 td.indexcolsize
 {
     opacity: 0.8;
+}
+
+
+
+/* ---  H e a d e r   r o w  ---------------------------------------------------------------------------
+ */
+
+tr.indexhead
+{
+    filter: opacity(0.6) saturate(0.5);
+    text-align: left;
+}
+
+
+tr.indexhead a
+{
+    text-decoration: none; /* Defeat here any default underlining (Chrome) as unecessary clutter */
 }
 
 
