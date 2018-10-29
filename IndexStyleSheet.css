@@ -6,6 +6,12 @@
  */
 
 
+body > * /* Body children as opposed to body, so limiting *h1* by its own *em* scale */
+{
+    max-width: 35em; /* Limit text lines to a readable length */
+}
+
+
 table#indexlist
 {
     white-space: nowrap;
