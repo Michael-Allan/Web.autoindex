@@ -1,6 +1,6 @@
-/* IndexStyleSheet.css - Style sheet for waycast directory documents
+/* directory_document.css - Style sheet for waycast directory documents
  *
- *   Summoned by each waycast directory document as configured in file `autoindex.conf`,
+ *   Summoned by each waycast directory document as configured in file `directory_document.conf`,
  *   this style sheet works on the client side — in the reader’s Web browser — where it formats
  *   the presentation of the directory.
  */

@@ -1,6 +1,6 @@
-/** IndexHeadInsert.js - Presentation program for waycast directory documents
+/** directory_document.js - Presentation program for waycast directory documents
   *
-  *   Summoned by each waycast directory document as configured in file `autoindex.conf`,
+  *   Summoned by each waycast directory document as configured in file `directory_document.conf`,
   *   this program runs on the client side — in the reader’s Web browser — where it manipulates
   *   the DOM of the directory.
   */
