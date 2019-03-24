@@ -1,7 +1,8 @@
-/** IndexHeadInsert.js - Index programming on the client side
+/** IndexHeadInsert.js - Presentation program for waycast directory documents
   *
-  *   Dispatched by the *IndexHeadInsert* directive of file autoindex.conf,
-  *   this program runs on the client side where it manipulates the DOM of the index document.
+  *   Summoned by each waycast directory document as configured in file `autoindex.conf`,
+  *   this program runs on the client side — in the reader’s Web browser — where it manipulates
+  *   the DOM of the directory.
   */
 ( function()
 {
@@ -50,4 +51,4 @@
 }() );
 
 
-// Copyright © 2017-2018 Michael Allan and contributors.  Licence MIT.
+// Copyright © 2017-2019 Michael Allan and contributors.  Licence MIT.

@@ -1,8 +1,8 @@
-/* IndexStyleSheet.css - Index styling on the client side
+/* IndexStyleSheet.css - Style sheet for waycast directory documents
  *
- *   Dispatched by the *IndexStyleSheet* directive of file autoindex.conf,
- *   this style sheet runs on the client side where it formats the presentation of the index document.
- *   https://httpd.apache.org/docs/2.4/mod/mod_autoindex.html#indexstylesheet
+ *   Summoned by each waycast directory document as configured in file `autoindex.conf`,
+ *   this style sheet works on the client side — in the reader’s Web browser — where it formats
+ *   the presentation of the directory.
  */
 
 
@@ -119,4 +119,4 @@ td.indexcolsize     /* "size" columns.  [ISS] */
  */
 
 
-/* Copyright © 2018 Michael Allan and contributors.  Licence MIT. */
+/* Copyright © 2018-2019 Michael Allan and contributors.  Licence MIT. */
