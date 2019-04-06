@@ -7,6 +7,7 @@
 ( function()
 {
 
+
     /** Moves any *h1* element of a README document to its proper place.
       *
       *     @param head (Element)
@@ -43,6 +44,8 @@
 
         e.firstChild.data = h1.textContent; // Retitling the document accordingly
     }
+
+
 
 ////////////////////
 
