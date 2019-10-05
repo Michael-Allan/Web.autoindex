@@ -95,6 +95,18 @@ table#indexlist td.indexcolsize
 
 
 
+/* ───  F o o t e r   b o i l e r p l a t e  ────────────────────────────────────────────────────────────
+ *
+ * Aka server signature.  https://httpd.apache.org/docs/2.4/mod/core.html#serversignature
+ */
+
+table#indexlist + address
+{
+    opacity: 0.6;
+}
+
+
+
 /* ───  H e a d e r   r o w  ────────────────────────────────────────────────────────────────────────────
  */
 
