@@ -53,4 +53,4 @@
 }() );
 
 
-// Copyright © 2017-2019, Michael Allan and contributors.  Licence MIT.
+// Copyright © 2017-2019  Michael Allan.  Licence MIT.
