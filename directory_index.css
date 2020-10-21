@@ -1,97 +1,73 @@
 /* Style sheet for directory indeces
  *
- *   Summoned by each directory index as configured in file `directory_index.conf`, this style sheet
- *   works on the client side where it formats the presentation of the index as a Web document.
+ * Summoned by each directory index as configured in file `directory_index.conf`, this style sheet
+ * works on the client side where it formats the presentation of the index as a Web document.
  */
 
 
-body
-{
-    font-family: monospace;
-}
+body {
+    font-family: monospace; }
 
 
-body > * /* Body children as opposed to body whole, so limiting child `h1` by its own `em` scale. */
-{
-    max-width: 47em; /* Limit text lines to a readable length. */
-}
+body > * { /* Body children as opposed to body whole, so limiting child `h1` by its own `em` scale. */
+    max-width: 47em; }/* Limit text lines to a readable length. */
 
 
-h1, h2, h3, h4, h5, h6
-{
-    font-family: sans-serif;
-}
+h1, h2, h3, h4, h5, h6 {
+    font-family: sans-serif; }
 
 
-table#indexlist
-{
-    white-space: nowrap;
-}
+table#indexlist {
+    white-space: nowrap; }
 
 
-table#indexlist tr.indexbreakrow /* Horizontal lines. */
-{
-    opacity: 0.4;
-}
+table#indexlist tr.indexbreakrow { /* Horizontal lines. */
+    opacity: 0.4; }
 
 
 
-/* ───  C o l u m n   " d e s c r i p t i o n "  ────────────────────────────────────────────────────────
+/* ───  C o l u m n   * D e s c r i p t i o n *  ────────────────────────────────────────────────────────
  */
 
-table#indexlist .indexcoldesc
-{
-    padding-left: 0.5em;
-}
+table#indexlist .indexcoldesc {
+    padding-left: 0.5em; }
 
 
 
-/* ───  C o l u m n   " l a s t   m o d i f i e d "  ────────────────────────────────────────────────────
+/* ───  C o l u m n   * L a s t   m o d i f i e d *  ────────────────────────────────────────────────────
  */
 
-table#indexlist .indexcollastmod
-{
-    padding-left: 0.5em;
-}
+table#indexlist .indexcollastmod {
+    padding-left: 0.5em; }
 
 
-table#indexlist td.indexcollastmod
-{
-    opacity: 0.6;
-}
+table#indexlist td.indexcollastmod {
+    opacity: 0.5; }
 
 
 
-/* ───  C o l u m n   " n a m e "  ──────────────────────────────────────────────────────────────────────
+/* ───  C o l u m n   * N a m e *  ──────────────────────────────────────────────────────────────────────
  */
 
-table#indexlist td.indexcolname > a
-{
+table#indexlist td.indexcolname > a {
     color: inherit; /* Defeat colour as unecessary and distracting. */
-    text-decoration: none; /* Defeat here any default underlining (Chrome) as unecessary clutter. */
-}
+    text-decoration: none; } /* Defeat here any default underlining (Chrome) as unecessary clutter. */
 
 
-table#indexlist tr.indexbreakrow + tr.even > td.indexcolname /* "Parent Directory" */
-{
-    opacity: 0.6;
-}
+table#indexlist tr.indexbreakrow + tr.even > td.indexcolname { /* Of the *Parent Directory* entry. */
+    opacity: 0.6; }
 
 
 
-/* ───  C o l u m n   " s i z e "  ──────────────────────────────────────────────────────────────────────
+/* ───  C o l u m n   * S i z e *  ──────────────────────────────────────────────────────────────────────
  */
 
-table#indexlist .indexcolsize
-{
-    padding-left: 1.0em;
-}
+table#indexlist .indexcolsize {
+    padding-left: 1.0em; }
 
 
-table#indexlist td.indexcolsize
-{
-    opacity: 0.8;
-}
+table#indexlist td.indexcolsize {
+    opacity: 0.7; }
 
 
 
@@ -100,28 +76,22 @@ table#indexlist td.indexcolsize
  * Aka server signature.  https://httpd.apache.org/docs/2.4/mod/core.html#serversignature
  */
 
-table#indexlist + address
-{
-    opacity: 0.6;
-}
+table#indexlist + address {
+    opacity: 0.6; }
 
 
 
 /* ───  H e a d e r   r o w  ────────────────────────────────────────────────────────────────────────────
  */
 
-table#indexlist tr.indexhead
-{
+table#indexlist tr.indexhead {
     filter: opacity(0.6) saturate(0.5);
-    text-align: left;
-}
+    text-align: left; }
 
 
-table#indexlist tr.indexhead a
-{
-    text-decoration: none; /* Defeat here any default underlining (Chrome) as unecessary clutter. */
-}
+table#indexlist tr.indexhead a {
+    text-decoration: none; } /* Defeat here any default underlining (Chrome) as unecessary clutter. */
 
 
 
-/* Copyright © 2018-2019  Michael Allan.  Licence MIT. */
+/* Copyright © 2018-2020  Michael Allan.  Licence MIT. */
