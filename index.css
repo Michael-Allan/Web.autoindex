@@ -1,7 +1,7 @@
-/* Style sheet for directory indeces
+/* Style sheet for indeces of directory content
  *
- * Summoned by each directory index as configured in file `directory_index.conf`, this style sheet
- * works on the client side where it formats the presentation of the index as a Web document.
+ * Referent of the `IndexStyleSheet` configuration directive, this style sheet is summoned
+ * to the client side where it formats the presentation of each index page.
  */
 
 

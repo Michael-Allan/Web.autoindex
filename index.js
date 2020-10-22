@@ -1,7 +1,7 @@
-/** Presentation program for waycast directory indeces
+/** Presentation program for indeces of directory content
   *
-  * Summoned by each directory index as configured in file `directory_index.conf`,
-  * this program works on the client side where it manipulates the index DOM.
+  * Referent of the `IndexHeadInsert` configuration directive, this program is summoned
+  * to the client side where it manipulates the DOM of each index page.
   */
 ( function() {
 
