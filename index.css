@@ -1,8 +1,7 @@
 /* Style sheet for indeces of directory content
  *
- * Referent of the `IndexStyleSheet` configuration directive, this style sheet is summoned
- * to the client side where it formats the presentation of each index page.
- */
+ * Referent of an `IndexStyleSheet` configuration directive, this style sheet is summoned
+ * to the client side where it formats the presentation of each index page. */
 
 
 body {
@@ -26,16 +25,16 @@ table#indexlist tr.indexbreakrow { /* Horizontal lines. */
 
 
 
-/* ───  C o l u m n   * D e s c r i p t i o n *  ────────────────────────────────────────────────────────
- */
+/* ───  C o l u m n   * D e s c r i p t i o n *  ──────────────────────────────────────────────────────── */
+
 
 table#indexlist .indexcoldesc {
     padding-left: 0.5em; }
 
 
 
-/* ───  C o l u m n   * L a s t   m o d i f i e d *  ────────────────────────────────────────────────────
- */
+/* ───  C o l u m n   * L a s t   m o d i f i e d *  ──────────────────────────────────────────────────── */
+
 
 table#indexlist .indexcollastmod {
     padding-left: 0.5em; }
@@ -46,8 +45,8 @@ table#indexlist td.indexcollastmod {
 
 
 
-/* ───  C o l u m n   * N a m e *  ──────────────────────────────────────────────────────────────────────
- */
+/* ───  C o l u m n   * N a m e *  ────────────────────────────────────────────────────────────────────── */
+
 
 table#indexlist td.indexcolname > a {
     color: inherit; /* Defeat colour as unecessary and distracting. */
@@ -59,8 +58,8 @@ table#indexlist tr.indexbreakrow + tr.even > td.indexcolname { /* Of the *Parent
 
 
 
-/* ───  C o l u m n   * S i z e *  ──────────────────────────────────────────────────────────────────────
- */
+/* ───  C o l u m n   * S i z e *  ────────────────────────────────────────────────────────────────────── */
+
 
 table#indexlist .indexcolsize {
     padding-left: 1.0em; }
@@ -73,16 +72,15 @@ table#indexlist td.indexcolsize {
 
 /* ───  F o o t e r   b o i l e r p l a t e  ────────────────────────────────────────────────────────────
  *
- * Aka server signature.  https://httpd.apache.org/docs/2.4/mod/core.html#serversignature
- */
+ * Aka server signature.  https://httpd.apache.org/docs/2.4/mod/core.html#serversignature */
 
 table#indexlist + address {
     opacity: 0.6; }
 
 
 
-/* ───  H e a d e r   r o w  ────────────────────────────────────────────────────────────────────────────
- */
+/* ───  H e a d e r   r o w  ──────────────────────────────────────────────────────────────────────────── */
+
 
 table#indexlist tr.indexhead {
     filter: opacity(0.6) saturate(0.5);
