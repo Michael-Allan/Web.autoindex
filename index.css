@@ -14,6 +14,9 @@ body > * { /* Body children as opposed to body whole, so limiting child `h1` by 
     max-width: 47em; }/* Limit text lines to a readable length. */
 
 
+h1 {
+    opacity: 0.6; }
+
 h1, h2, h3, h4, h5, h6 {
     font-family: sans-serif; }
 
@@ -24,18 +27,9 @@ table#indexlist {
     white-space: nowrap; }
 
 
-table#indexlist tr.indexbreakrow { /* Horizontal lines. */
-    opacity: 0.4; }
-
-
 table#indexlist tr.indexbreakrow + tr.even > td.indexcolicon, /* Of the *Parent Directory* entry. */
 table#indexlist tr.indexbreakrow + tr.even > td.indexcolname {
     opacity: 0.6; }
-
-
-table#indexlist tr.indexhead {
-    font-size: var(--slightlyEnlargedFontSize);
-    opacity: 0.7; }
 
 
 
@@ -91,17 +85,34 @@ table#indexlist td.indexcolsize {
 
 
 
-/* ───  H e a d e r   r o w  ──────────────────────────────────────────────────────────────────────────── */
+/* ───  H e a d   r o w   &   h o r i z o n t a l   r u l e s  ────────────────────────────────────────── */
 
 
 table#indexlist tr.indexhead {
-    filter: opacity(0.6) saturate(0.5);
- /* font-family: sans-serif; */
+    opacity: 0.5;
+    font-size: var(--slightlyEnlargedFontSize);
     text-align: left; }
 
 
-table#indexlist tr.indexhead a {
+table#indexlist tr.indexhead > th {
+    font-weight: normal; }
+
+
+table#indexlist tr.indexhead > th > a {
+    color: inherit; /* Defeat colour as distracting. */
     text-decoration: none; } /* Defeat here any default underlining (Chrome) as unecessary clutter. */
+
+
+table#indexlist tr.indexbreakrow/*horizontal rule*/ {
+    opacity: 0.4; }
+
+
+/* Reducing the overlarge head gap.
+ */
+table#indexlist tr.indexhead > th {
+    padding-bottom: 0; }
+table#indexlist tr.indexhead + tr.indexbreakrow/*horizontal rule*/ > th {
+    padding-top: 0; }
 
 
 
