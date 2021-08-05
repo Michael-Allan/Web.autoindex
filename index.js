@@ -1,7 +1,7 @@
 /** Presentation program for indeces of directory content
   *
-  * Referent of an `IndexHeadInsert` configuration directive, this program is summoned
-  * to the client side where it manipulates the DOM of each index page.
+  * Referent of an `IndexHeadInsert` configuration directive, this program is summoned to the client side
+  * where it manipulates the DOM of each index page.
   */
 ( function() {
 
