@@ -1,7 +1,7 @@
 /* Style sheet for indeces of directory content
  *
- * Referent of an `IndexStyleSheet` configuration directive, this style sheet is summoned
- * to the client side where it formats the presentation of each index page. */
+ * Referent of an Apache `IndexStyleSheet` configuration directive, this style sheet is fetched
+ * to the client side where it orders the presentation of each index page. */
 
 
 body {
@@ -127,4 +127,4 @@ table#indexlist + address {
 
 
 
-                                                /* Copyright © 2018-2020  Michael Allan.  Licence MIT. */
+                                          /* Copyright © 2018-2020, 2022  Michael Allan.  Licence MIT. */

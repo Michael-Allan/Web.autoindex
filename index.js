@@ -1,7 +1,7 @@
 /** Presentation program for indeces of directory content
   *
-  * Referent of an `IndexHeadInsert` configuration directive, this program is summoned to the client side
-  * where it manipulates the DOM of each index page.
+  * Referent of an Apache `IndexHeadInsert` configuration directive, this program is fetched
+  * to the client side where it orders the DOM of each index page.
   */
 ( function() {
 
@@ -101,4 +101,4 @@
     run( document.body ); }() );
 
 
-                                                   // Copyright © 2017-2020  Michael Allan.  Licence MIT.
+                                             // Copyright © 2017-2020, 2022  Michael Allan.  Licence MIT.
