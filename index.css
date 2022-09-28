@@ -6,12 +6,13 @@
 
 body {
     font-family: monospace;
-    --reducedFontSize: 0.9em;
-    --slightlyEnlargedFontSize: 1.05em; }
+    --boilerplateFontSize: 0.9em;
+    --principalFontSize: 1.1em; } /* Befitting the contents, namely a table of contents and an abstract. */
 
 
 body > * { /* Body children as opposed to body whole, so limiting child `h1` by its own `em` scale. */
     max-width: 47em; }/* Limit text lines to a readable length. */
+
 
 
 h1 {
@@ -21,9 +22,15 @@ h1, h2, h3, h4, h5, h6 {
     font-family: sans-serif; }
 
 
+
+section {
+    font-size: var(--principalFontSize); }
+
+
+
 table#indexlist {
-    font-size: unset; /* Defeating the implicit enlargement of Firefox (68.10), in favour
-      of enlarging the *Name* column alone. */
+ /* font-size: unset; *//* Defeating the default enlargement of Firefox (91.13). */
+    font-size: var(--principalFontSize);
     white-space: nowrap; }
 
 
@@ -40,10 +47,6 @@ table#indexlist .indexcoldesc {
     padding-left: 0.5em; }
 
 
-table#indexlist td.indexcoldesc {
-    font-size: var(--slightlyEnlargedFontSize); }
-
-
 
 /* ───  C o l u m n   * L a s t   m o d i f i e d *  ──────────────────────────────────────────────────── */
 
@@ -53,7 +56,7 @@ table#indexlist .indexcollastmod {
 
 
 table#indexlist td.indexcollastmod {
-    font-size: var(--reducedFontSize);
+    font-size: var(--boilerplateFontSize);
     opacity: 0.5; }
 
 
@@ -62,7 +65,6 @@ table#indexlist td.indexcollastmod {
 
 
 table#indexlist td.indexcolname {
-    font-size: 1.2em;
     padding-left: 0.2em; }
 
 
@@ -80,7 +82,7 @@ table#indexlist .indexcolsize {
 
 
 table#indexlist td.indexcolsize {
-    font-size: var(--reducedFontSize);
+    font-size: var(--boilerplateFontSize);
     opacity: 0.7; }
 
 
@@ -90,7 +92,6 @@ table#indexlist td.indexcolsize {
 
 table#indexlist tr.indexhead {
     opacity: 0.5;
-    font-size: var(--slightlyEnlargedFontSize);
     text-align: left; }
 
 
