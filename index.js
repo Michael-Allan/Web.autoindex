@@ -33,8 +33,8 @@
         if( e.localName === 'h1' && e.id === 'indextitle' ) {
             ++h1Count;
             h1Generated = e; }
+        if( typeof        document.createTreeWalker !== 'function' ) return; // Unsupported by client.
         const traversal = document.createTreeWalker( body, NodeFilter.SHOW_ELEMENT );
-        if( !traversal ) return; // Unsupported by client.
         let h1Declared; /* The `h1` element declared by the readme file, if any, iff `h1Count` is two.
           http://httpd.apache.org/docs/2.4/mod/mod_autoindex.html#readmename */
         for( let e = traversal.nextNode();  // Onto `body` itself, only to begin with
