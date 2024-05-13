@@ -4,10 +4,11 @@
  * to the client side where it orders the presentation of each index page. */
 
 
-body {
+:root {
     font-family: monospace;
-    --boilerplateFontSize: 0.9em;
-    --principalFontSize: 1.1em; } /* Befitting the contents, namely a table of contents and an abstract. */
+    font-size: 1.1em; /* Befitting the text: a table of contents and an abstract. */
+    --boilerplateOpacity: 0.55;
+    --numericFontSize: 0.85em; }
 
 
 body > * { /* Body children as opposed to body whole, so limiting child `h1` by its own `em` scale. */
@@ -15,28 +16,19 @@ body > * { /* Body children as opposed to body whole, so limiting child `h1` by 
 
 
 
-h1 {
-    opacity: 0.6; }
-
 h1, h2, h3, h4, h5, h6 {
     font-family: sans-serif; }
 
 
 
-section {
-    font-size: var(--principalFontSize); }
-
-
-
 table#indexlist {
- /* font-size: unset; *//* Defeating the default enlargement of Firefox (91.13). */
-    font-size: var(--principalFontSize);
+    font-size: unset; /* Defeating the default enlargement of Firefox (91.13). */
     white-space: nowrap; }
 
 
 table#indexlist tr.indexbreakrow + tr.even > td.indexcolicon, /* Of the *Parent Directory* entry. */
 table#indexlist tr.indexbreakrow + tr.even > td.indexcolname {
-    opacity: 0.6; }
+    opacity: 0.3; }
 
 
 
@@ -56,8 +48,8 @@ table#indexlist .indexcollastmod {
 
 
 table#indexlist td.indexcollastmod {
-    font-size: var(--boilerplateFontSize);
-    opacity: 0.5; }
+    font-size: var(--numericFontSize);
+    opacity: var(--boilerplateOpacity); }
 
 
 
@@ -82,8 +74,8 @@ table#indexlist .indexcolsize {
 
 
 table#indexlist td.indexcolsize {
-    font-size: var(--boilerplateFontSize);
-    opacity: 0.7; }
+    font-size: var(--numericFontSize);
+    opacity: var(--boilerplateOpacity); }
 
 
 
@@ -91,7 +83,8 @@ table#indexlist td.indexcolsize {
 
 
 table#indexlist tr.indexhead {
-    opacity: 0.5;
+    font-size: 0.9em;
+    opacity: 0.7;
     text-align: left; }
 
 
@@ -105,7 +98,7 @@ table#indexlist tr.indexhead > th > a {
 
 
 table#indexlist tr.indexbreakrow/*horizontal rule*/ {
-    opacity: 0.4; }
+    opacity: 0.1; }
 
 
 /* Reducing the overlarge head gap.
@@ -124,7 +117,7 @@ table#indexlist tr.indexhead + tr.indexbreakrow/*horizontal rule*/ > th {
  * Apparently a signature is injected only when a readme file is absent. */
 
 table#indexlist + address {
-    opacity: 0.6; }
+    opacity: var(--boilerplateOpacity); }
 
 
 
