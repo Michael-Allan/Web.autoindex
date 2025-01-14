@@ -42,7 +42,7 @@
             switch( e.localName ) {
                 case 'table':
                     if( e.id === 'indexlist' ) {
-                        const trHead = e.firstElementChild/*tbody*/.firstElementChild/*tr indexhead*/;
+                        const trHead = e.firstElementChild/*tbody*/.firstElementChild/*tr.indexhead*/;
                         let t;
 
                       // Retitle the timestamp column from ‘Last modified’ to ‘Timestamp’
