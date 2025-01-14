@@ -57,14 +57,47 @@
                         t = asText( trHead.nextElementSibling/*tr.indexbreakrow*/
                           .nextElementSibling/*tr.even*/.firstElementChild/*td.indexcolicon*/
                           .nextElementSibling/*td.indexcolname*/.firstElementChild/*a*/.firstChild );
-                        if( t && t.data === 'Parent Directory'/*as it should*/ ) t.data = 'Parent';
+                        if( t && t.data === 'Parent Directory'/*as it should*/ ) t.data = 'Parent'; }
 
-                        traversal.lastChild(); } // Fast forwarding (near) to the end of the table.
+                     // traversal.lastChild(); } // Fast forwarding (near) to the end of the table.
+                     //// incompatible with newly introduced `case 'a'` further below
                     continue;
                 case 'h1':
                     if( !e.isSameNode( h1Generated )) {
                         ++h1Count;
                         h1Declared = e; }
+                    continue;
+                case 'a':
+                    const a = e;
+                    const href = a.getAttribute( 'href' );
+                    if( href == null ) continue;
+
+                  // Hide Breccian image-file entries in the index, leaving only their source siblings
+                  // ────────────────────────
+                    if( href.endsWith( '.brec.xht' )) {
+                        e = a.parentNode;
+                        if( e.localName === 'td' && e.className === 'indexcolname' ) {
+                            e.parentNode/*tr*/.style.display = 'none'; /* Removing it by scripting,
+                              rather than an Apache `IndexIgnore` directive.  Thus robots that ignore
+                              Javascript will find Apache’s hyperlinks for the image files (in the
+                              directory index) and crawl them accordingly, while those that honour
+                              Javascript will instead crawl the images via the hyperlinks for their
+                              source files, which are retargeted below.
+                                 The Wayback Machine in its 2024-9 crawl, for instance, omitted the image
+                              files.  http://web.archive.org/web/20240911133046/http://reluk.ca/ */ }}
+
+                  // Retarget to their image siblings all hyperlinks to local Breccian source files
+                  // ────────────────────────────────
+                    retarget: if( href.endsWith( '.brec' )) {
+                        if( href.startsWith( '//' ) || ( href.startsWith('http') &&
+                              (href.startsWith(':',4) || href.startsWith('s:',4)) )) {
+                            // Then `href` is either a (rare) network-path reference or (HTTP/HTTPS) URI,
+                            // and therefore specifies a host name.
+                            const h = a.hostname;
+                            if( !( h === '69.165.222.199' ||
+                                   h === 'reluk.ca' || h.endsWith('.reluk.ca') )) {
+                                break retarget; }} // Then the target is remote, leave it be.
+                        a.setAttribute( 'href', href + '.xht' ); } // Retargeting to its image sibling.
                     continue; }}
         if( !h1Generated ) return;
         if( h1Count === 1 ) { // A readme file is absent.
@@ -101,4 +134,4 @@
     run( document.body ); }() );
 
 
-                                             // Copyright © 2017-2020, 2022  Michael Allan.  Licence MIT.
+                                       // Copyright © 2017-2020, 2022, 2025  Michael Allan.  Licence MIT.
