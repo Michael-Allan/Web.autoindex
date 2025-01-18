@@ -74,6 +74,8 @@
 
                   // Hide Breccian image-file entries in the index, leaving only their source siblings
                   // ────────────────────────
+                  // This is infeasible with the deprecated form of auto-indexing (see `../deprecated/`)
+                  // owing to the flat structure of elements behind its non-tabular layout.
                     if( href.endsWith( '.brec.xht' )) {
                         e = a.parentNode;
                         if( e.localName === 'td' && e.className === 'indexcolname' ) {
