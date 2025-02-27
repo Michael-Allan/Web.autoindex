@@ -84,7 +84,7 @@
                               Javascript will find Apache’s hyperlinks for the image files (in the
                               directory index) and crawl them accordingly, while those that honour
                               Javascript will instead crawl the images via the hyperlinks for their
-                              source files, which are retargeted below.
+                              source files, which are retargeted (below) to their images.
                                  The Wayback Machine in its 2024-9 crawl, for instance, omitted the image
                               files.  http://web.archive.org/web/20240911133046/http://reluk.ca/ */ }}
 
